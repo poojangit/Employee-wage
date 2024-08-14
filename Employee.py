@@ -29,12 +29,19 @@ def generate_random_number() :
 if __name__ == '__main__' :
     welcome_message()
     
-    for e in empDetails:
+    wagePerHour = 20
+    fullDayHour = 8
+    
+    for employee in empDetails:
+        dailyWage = 0
         attendance = generate_random_number()
         if attendance == 0:
-            e['attendance'] = "Absent"
+            employee['attendance'] = "Absent"
         else:
-            e['attendance'] = "Present"
+            employee['attendance'] = "Present"
+            dailyWage = wagePerHour * fullDayHour
+            employee['daiyWage'] = dailyWage
             
-    for e in empDetails : 
-        print(e)
+        print(f"Daily Wages of {employee['empName']} : {dailyWage}")
+    
+        print(employee)

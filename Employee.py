@@ -24,10 +24,7 @@ def welcome_message() :
 def generate_random_number() : 
     return random.randint(0,2)
 
-   
-
-if __name__ == '__main__' :
-    welcome_message()
+def wage_computation():
     
     wagePerHour = 20
     fullDayHour = 8
@@ -48,3 +45,8 @@ if __name__ == '__main__' :
         employee['daiyWage'] = dailyWage
         print(f"Daily Wages of {employee['empName']} : {dailyWage}")
         print(employee)
+
+if __name__ == '__main__' :
+    welcome_message()
+    wage_computation()
+        
